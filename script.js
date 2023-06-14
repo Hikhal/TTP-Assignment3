@@ -1,79 +1,71 @@
-// 1
+// Select the section with an id of container without using querySelector.
 {
     var x = document.getElementById("container");
     console.log(x);
 }
  
-// 2
+// Select the section with an id of container using querySelector.
 { var y = document.querySelector("#container") 
     console.log(y)
 }
 
-// 3
+// Select all of the list items with a class of "second".
 {
     const classList = document.querySelectorAll(".second")
     console.log(classList)
 }
 
-// 4
+// Select a list item with a class of third, but only the list item inside of the ol tag.
 {
     const ele = document.getElementsByTagName("ol");
     const listItemThirdClass = ele[0].getElementsByClassName("third");
     console.log(listItemThirdClass);
 }
 
-// 5
+// Give the section with an id of container the text "Hello!".
 console.log(document.getElementById("container").textContent = "Hello!");
 
-// 6
+// Add the class main to the div with a class of footer.
 {
     var divList = document.querySelector(".footer")
     divList.classList.add("main")
     console.log(divList.classList)
 }
 
-// 7
+// Remove the class main on the div with a class of footer.
 {
     var divList = document.querySelector(".footer")
     divList.classList.remove("main")
     console.log(divList.classList)
 }
 
-// 8
+// Create a new li element.
 {
     var liElement = document.createElement("li"); // Create a new <li> element
 
-    var containerList = document.getElementsByTagName("ul")[0];
-    newEle = document.createElement("li");
-    newEle.className = "fourth";
-    containerList.appendChild(newEle);
-    console.log(containerList);
 }
 
-// 9
+// Give the li the text "four".
 {
-    var fourthEle = document.getElementsByClassName("fourth")[0];
-    fourthEle.textContent = "four";
+    liElement.textContent = "four";
     console.log(fourthEle)
 }
 
-// 10
+// Append the li to the ul element.
 {
     var containerList = document.getElementsByTagName("ul")[0];
-    newEle = document.createElement("li");
-    newEle.className = "fourth";
-    containerList.appendChild(newEle);
+    containerList.appendChild(liElement);
     console.log(containerList);
 }
 
-// 11
+// Loop over all of the lis inside the ol tag and give them a background color of "green".
 {
     const listOfols= document.getElementsByTagName("ol");
     for (let li of listOfols) li.style.backgroundColor="green";
     'green'
 }
 
-// 12
+//  Remove the div with a class of footer.
 {
     var footerElement = document.querySelector("div.footer"); 
     footerElement.remove();
